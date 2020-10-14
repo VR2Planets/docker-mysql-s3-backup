@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM ubuntu
 
 MAINTAINER hleroy <hleroy@hleroy.com>
 
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install MariaDB client
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    mariadb-client \
+    mysql-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Add Postgres repository configuration
